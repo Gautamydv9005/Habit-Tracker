@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Habit Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="dashboard-top">
+        <div class="stats-col">
+            <div class="stat-card">
+                <div class="stat-header">Start Date</div>
+                <div class="stat-value" style="padding: 5px;">
+                    <input type="date" id="start-date-input" class="date-picker">
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header">Best Habit</div>
+                <div class="stat-value" id="best-habit">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header">Worst Habit</div>
+                <div class="stat-value" id="worst-habit">-</div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="progressChart"></canvas>
+        </div>
+
+        <div class="stats-col">
+            <div>
+                <div class="progress-stat">100% Complete</div>
+                <div class="progress-sub" id="count-100">0 Days</div>
+            </div>
+            <div>
+                <div class="progress-stat">50% Complete</div>
+                <div class="progress-sub" id="count-50">0 Days</div>
+            </div>
+            <div>
+                <div class="progress-stat">0% Complete</div>
+                <div class="progress-sub" id="count-0">0 Days</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tracker-wrapper">
+        <table id="tracker-table">
+            <thead>
+                <tr id="week-row">
+                    <th class="header-habit" rowspan="2">Habit Names<br><small style="font-weight:normal; opacity:0.8">(Click names to edit)</small></th>
+                    <th class="header-total" rowspan="2">Total Completed</th>
+                </tr>
+                <tr id="date-row">
+                    </tr>
+            </thead>
+            <tbody id="tracker-body">
+                </tbody>
+        </table>
+    </div>
+    
+    <button class="reset-btn" onclick="resetData()">Reset All Data</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
