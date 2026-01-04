@@ -5,7 +5,7 @@
 
     let habitsList = [];
     let state = [];
-    let startDateValue = "2025-01-01"; 
+    let startDateValue = "2026-01-01"; 
 
 
     const weekRow = document.getElementById('week-row');
@@ -273,5 +273,6 @@
 
     // START
     init();
+
 
 
