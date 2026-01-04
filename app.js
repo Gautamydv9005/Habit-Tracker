@@ -1,24 +1,19 @@
 
     // --- DEFAULT CONFIG ---
-    const defaultHabits = [
-        "Eat Breakfast", "4 Hrs Devlopment", "1 hrs DSA", 
-        "1.5 Hrs Study", "screen time < 4 hrs", "No Snacks", 
-        "Do Homework", "Make Bed"
-    ];
+    const defaultHabits = ["","","","","","","","","",""];
     const totalDays = 28; 
 
-    // --- STATE VARIABLES ---
     let habitsList = [];
     let state = [];
-    let startDateValue = "2025-01-01"; // Default string YYYY-MM-DD
+    let startDateValue = "2025-01-01"; 
 
-    // --- DOM ELEMENTS ---
+
     const weekRow = document.getElementById('week-row');
     const dateRow = document.getElementById('date-row');
     const tbody = document.getElementById('tracker-body');
     const startDateInput = document.getElementById('start-date-input');
 
-    // --- INITIALIZATION ---
+
     function init() {
         loadData();
         
@@ -278,4 +273,5 @@
 
     // START
     init();
+
 
